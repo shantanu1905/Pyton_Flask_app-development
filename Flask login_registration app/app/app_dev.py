@@ -7,11 +7,10 @@ cursor=con.cursor()
 
 app = Flask(__name__)
 app.config['SECRET_KEY']= 'Sm9obiBTY2hyb20ga2lja3MgYXNz'
-app.config['SECRET_KEY']= 'Sm9obiBTY2hyb20ga2lja3MgYXNz'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'shantanunimkar19@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Shant@24x7'
+app.config['MAIL_USERNAME'] = 'YOUR EMAIL '
+app.config['MAIL_PASSWORD'] = 'YOUR PASSWORD'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -101,7 +100,7 @@ def track():
 
     # Viewing a pretty string version
     print(str(user_agent)) # returns "iPhone / iOS 5.1 / Mobile Safari 5.1"
-    msg = Message('Services.io@Auth-Team', sender='shantanunimkar19@gmail.com', recipients=[email])
+    msg = Message('Services.io@Auth-Team', sender='YOUR EMAIL', recipients=[email])
     msg.html = render_template('email.html', os=os ,ip=ip ,browser=browser ,dev=dev,dev_b=dev_b,dev_m=dev_m)
     mail.send(msg)
 
